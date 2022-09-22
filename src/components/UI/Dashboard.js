@@ -1,16 +1,26 @@
 import React from 'react'
 import '../UI/Dashboard.css'
-import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { AppContext } from '../../App'
+import Nav from './Nav'
+import { useState } from 'react'
 
 const Dashboard = () => {
+  const {formValues} = useContext(AppContext)
+  const [toggleMode, setToggleMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
+
+  const changeMode = () => {
+      setToggleMode(!toggleMode)
+      setDarkMode(!darkMode)
+  }
+
   return (
-    <section className='welcome-pg'>
-        <nav className='navbar'>
-            <h2>Welcome back! Tola</h2>
-            <Link to={"/login"}>
-                <p>Log Out</p>
-            </Link>
-        </nav>
+    <section className={darkMode? "dark-mode" : "welcome-pg" }>
+        <Nav 
+          toggleMode={toggleMode}
+          darkMode={changeMode}
+        />
     </section>
   )
 }

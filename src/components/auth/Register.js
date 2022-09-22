@@ -1,29 +1,26 @@
 import React from 'react'
 import '../auth/auth.css'
 import { useNavigate, Link } from 'react-router-dom'
-import { nanoid } from 'nanoid'
-import { useState, useEffect } from 'react'
+// import { nanoid } from 'nanoid'
+import { useEffect } from 'react'
+import { useContext } from 'react'
+import { AppContext } from '../../App'
 
 const Register = () => {
     let navigate = useNavigate()
 
-    const initialFormValues = {
-        username: "",
-        password: "",
-        confirmPwd: "",
-    }
+    const {formValues, setFormValues, nameErr, setNameErr, pwdErr, setPwdErr, confirmPwdErr, setConfirmPwdErr} = useContext(AppContext)
 
-
-
-    const [formValues, setFormValues] = useState(initialFormValues)
-    // const [formErrors, setFormErrors] = useState({
+    // const initialFormValues = {
     //     username: "",
     //     password: "",
     //     confirmPwd: "",
-    // })
-    const [nameErr, setNameErr] = useState("")
-    const [pwdErr, setPwdErr] = useState("")
-    const [confirmPwdErr, setConfirmPwdErr] = useState("")
+    // }
+
+    // const [formValues, setFormValues] = useState(initialFormValues)
+    // const [nameErr, setNameErr] = useState("")
+    // const [pwdErr, setPwdErr] = useState("")
+    // const [confirmPwdErr, setConfirmPwdErr] = useState("")
 
     useEffect(() => {
         setNameErr("")
@@ -53,9 +50,8 @@ const Register = () => {
 
         }
 
-
-
         console.log(formValues);
+        
     }
 
     useEffect(() => {
@@ -73,7 +69,7 @@ const Register = () => {
 
                     <label htmlFor="password">Password</label>
                     <input type="password" name='password' onChange={handleChange} value={formValues.password} placeholder='Enter Password...'/>
-                    <p></p>
+                    <p>{pwdErr}</p>
 
                     <label htmlFor="confirmPwd">Confirm Password</label>
                     <input type="password" name='confirmPwd' onChange={handleChange} value={formValues.confirmPwd} placeholder='Confirm Password...'/>

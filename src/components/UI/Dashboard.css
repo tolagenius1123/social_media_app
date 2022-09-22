@@ -7,23 +7,13 @@
 
 .welcome-pg {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background: #fff;
 }
 
-.navbar {
+.dark-mode {
     width: 100%;
-    height: 80px;
-    background: #5800FF;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    /* height: 100vh; */
+    background: black;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: #fff;
-}
