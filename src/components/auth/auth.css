@@ -1,63 +1,63 @@
 section {
-    width: 100%;
-    height: 100vh;
-    background: #5800FF;
+	width: 100%;
+	height: 100vh;
+	background: #5800ff;
 }
 
 main {
-    background: #fff;
-    padding: 20px;
-    width: 40%;
-    margin: 0 auto;
-    /* position: relative;
+	background: #fff;
+	padding: 20px;
+	width: 40%;
+	margin: 0 auto;
+	/* position: relative;
     top: 20vh; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 10px;
+	transform: translate(-50%, -50%);
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
+	display: flex;
+	flex-direction: column;
+	background: #fff;
 }
-form label{
-    margin-bottom: 5px;
+form label {
+	margin-bottom: 5px;
 }
 
 form input {
-    height: 35px;
-    padding: 10px;
-    border: 1px solid #5800FF;
+	height: 35px;
+	padding: 10px;
+	border: 1px solid #5800ff;
 }
 
 form p {
-    color: red;
-    font-size: 12px;
-    margin-bottom: 10px;
+	color: red;
+	font-size: 12px;
+	margin-bottom: 10px;
 }
 
 form button {
-    width: 40%;
-    height: 35px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    border: none;
-    background: #5800FF;
-    color: #fff;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 5px;
+	width: 40%;
+	height: 35px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	border: none;
+	background: #5800ff;
+	color: #fff;
+	font-weight: 500;
+	cursor: pointer;
+	border-radius: 5px;
 }
 
 main p {
-    font-size: 14px;
+	font-size: 14px;
 }
 
 main p span {
-    color: #5800FF;
-    cursor: pointer;
+	color: #5800ff;
+	cursor: pointer;
 }

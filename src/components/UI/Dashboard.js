@@ -3,7 +3,9 @@ import '../UI/Dashboard.css'
 import { useContext } from 'react'
 import { AppContext } from '../../App'
 import Nav from './Nav'
+import Bio from './Bio'
 import { useState } from 'react'
+import Gallery from './Gallery'
 
 const Dashboard = () => {
   const {formValues} = useContext(AppContext)
@@ -21,6 +23,8 @@ const Dashboard = () => {
           toggleMode={toggleMode}
           darkMode={changeMode}
         />
+        <Bio />
+        <Gallery />
     </section>
   )
 }
